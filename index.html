@@ -13,8 +13,8 @@
     <style> 
         * { font-size: 115%; }
         body { max-width: 700px; margin: auto; padding: 10px; }
-        td, th, caption, .form-text, .form-check-label, p { font-size: 70%; }
-        label { font-size: 100%; }
+        td, th, caption, .form-text, .form-check-label, p, .nav-link { font-size: 70%; }
+        label, li { font-size: 100%; }
         .link { font-size:inherit; color:rgb(57, 57, 255); text-decoration:underline; cursor:pointer; }
         /* from black to hex filter generator https://codepen.io/sosuke/pen/Pjoqqp */
         .filter-green { filter: invert(62%) sepia(57%) saturate(3923%) hue-rotate(80deg) brightness(121%) contrast(125%); }
@@ -56,8 +56,8 @@
             <td><img src="resources/x-lg.svg" height="11.5%" width="11.5%" class="filter-red" /></td>
         </tr>
         <tr>
-            <td>Julij</td>
-            <td>Kopilović</td>
+            <td>Marko</td>
+            <td>Novak</td>
             <td><img src="resources/check-lg.svg" height="15%" width="15%" class="filter-green" /></td>
         </tr>
         <tr>
@@ -222,6 +222,114 @@
             </div>
         </div>
     </div>
+
+    <button class="btn-close"></button><br>
+
+    <a class="btn btn-primary my-3" data-bs-toggle="collapse" href="#collapse1">Toggle Collapse</a>
+    <div class="collapse" id="collapse1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Tempora libero doloremque dignissimos officia ea impedit
+        inventore temporibus, totam est exercitationem quaerat voluptatum
+        quam sed neque expedita, molestias reiciendis explicabo eum?
+    </div>
+
+    <ul class="list-group mb-3">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+        <li class="list-group-item">Fourth item</li>
+        <li class="list-group-item">Last item</li>
+    </ul>
+
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal1">Show Modal</button>
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Hello this is a modal
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar bg-light navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="cursor:pointer">Navbar</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" style="cursor:pointer">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="cursor:pointer">Jokes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="cursor:pointer">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a class="btn btn-primary my-3" data-bs-toggle="offcanvas" href="#offcanvas1">Offcanvas</a>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore eius voluptatem pariatur
+                 natus voluptate ab esse, ullam eveniet odit quas eos quod sit. Nihil adipisci
+                  quos nulla amet neque magnam!
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">Action</a></li>
+                    <li><a class="dropdown-item">Another action</a></li>
+                    <li><a class="dropdown-item">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link">&laquo;</a></li>
+            <li class="page-item"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link active">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item"><a class="page-link">&raquo;</a></li>
+        </ul>
+    </nav>
+
+    <div class="progress my-3">
+        <div class="w-75 progress-bar progress-bar-striped progress-bar-animated">75%</div>
+    </div>
+
+    <div class="spinner-border me-3"></div>
+    <div class="spinner-border text-primary me-3"></div>
+    <div class="spinner-border text-warning me-3"></div>
+    <div class="spinner-grow"></div><br>
+    <button class="btn btn-primary my-3" disabled><div class="spinner-border spinner-border-sm"></div> Loading...</button>
+
+    <br>
+    <span data-bs-toggle="tooltip" title="this is a tooltip">Tooltip</span>
 
     <hr>
     <footer style="color:rgb(94, 94, 94); font-size: 85%; text-align: center; margin-bottom: 10em;">
